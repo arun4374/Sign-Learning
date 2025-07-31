@@ -466,8 +466,10 @@
     width: 100%;
     border-radius: 10px;
     display: flex;
-    background: var(--bs-white);
+    background: var(--bs-sec);
     transition: 0.5s;
+    justify-content: center;
+    align-items: center;
 }
 
 .offer-section .nav a.accordion-link.active {
@@ -616,7 +618,6 @@
 
 h2.accordion-header button {
   padding: 15px 25px;
-  font-family: 'Poppins';
   font-size: 16px;
   font-weight: 600;
 }
@@ -969,12 +970,12 @@ h2.accordion-header button {
 
 .footer .footer-item a {
     line-height: 35px;
-    color: var(--bs-body);
+    color: var(--bs-white);
     transition: 0.5s;
 }
 
 .footer .footer-item p {
-    line-height: 35px;
+    line-height: 25px;
 }
 
 .footer .footer-item a:hover {
@@ -992,6 +993,10 @@ h2.accordion-header button {
 
 .footer .footer-item .footer-btn a:hover i {
     color: var(--bs-primary);
+}
+
+.align-items-center {
+    margin-bottom: 10px;
 }
 /*** Footer End ***/
 
