@@ -84,19 +84,52 @@
 
 .wp {
     color: #FFFFFF !important;
-    background-color: green;
+    background-color: rgba(12, 168, 12, 0.74);
     border: none !important;
     outline: none !important;
     transition: all .3s;
 }
 .wp i {
-    font-size: 24px;
-    margin-right: 5px
+    font-size: 30px;
+    margin-right: 5px;
+    font-weight: 400;
 }
 .btn.wp:hover {
     transform: scale(1.1);
-    background-color: green;
+    background-color: rgba(12, 168, 12, 0.74);
 }
+
+.social-media-link {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    position: fixed;
+    bottom: 10%;
+    left: 5px;
+}
+
+.social-media-link .btn.facebook {
+    background-color: #7a6ad8;
+    color: var(--bs-white);
+    border-radius: none;
+}
+
+.social-media-link .btn.youtube {
+    background-color: red;
+    color: var(--bs-white);
+    border-radius: none;
+}
+
+.social-media-link .btn.instagram {
+    background-color: #ec3c8e;
+    color: var(--bs-white);
+    border-radius: none;
+}
+
+.social-media-link .btn:hover {
+    transform: scale(1.1);
+}
+
 .btn:hover {
     background: var(--bs-dark);
     color: var(--bs-white);
@@ -248,10 +281,9 @@
 
 .container.main_page {
     display: grid;
-    
     gap: 32px;
     height:100vh;
-    padding: 70px 5px;
+    padding: 120px 5px;
     min-height: 600px;
     max-height: 800px;
 }
@@ -1061,5 +1093,8 @@ h2.accordion-header button {
     }
     .bg_color {
         display: none;
+    }
+    .team .team-item .team-img {
+        position: absolute;
     }
 }
