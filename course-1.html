@@ -37,6 +37,7 @@
 
         <!--  Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+        <link href="css/price.css" rel="stylesheet">
     </head>
 
     <body>
@@ -63,7 +64,17 @@
                     <div class="navbar-nav ms-auto py-0">
                         <a href="index.html" class="nav-item nav-link">Home</a>
                         <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="course.html" class="nav-item nav-link active">Courses</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link active" data-bs-toggle="dropdown">
+                                <span class="dropdown-toggle">courses</span>
+                            </a>
+                            <div class="dropdown-menu m-0">
+                                <a href="course-1.html" class="dropdown-item active">language</a>
+                                <a href="course-2.html" class="dropdown-item">UGC NET</a>
+                                <a href="course-3.html" class="dropdown-item">Kerala PSC</a>
+                                <a href="course-4.html" class="dropdown-item">NEET</a>
+                            </div>
+                        </div>
                         <a href="contact.html" class="nav-item nav-link">Contact Us</a>
                     </div>
                     <a href="course.html" class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0">Get Started</a>
@@ -77,7 +88,7 @@
                     <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
                         <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                         <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                        <li class="breadcrumb-item active text-primary">Service</li>
+                        <li class="breadcrumb-item active text-primary">Course - Language Learning</li>
                     </ol>    
                 </div>
             </div>
@@ -97,6 +108,69 @@
                 <i class="fab fa-instagram text-white"></i>
             <a>
          </div>
+
+         <!-- Price plan details Start  -->
+         
+         <!-- Malayalam -->
+            <h1 class="price-title">Spoken Malayalam</h1>
+            <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 2rem;">
+            <span style="margin-right: 10px;">Group</span>
+            <label class="switch">
+                <input type="checkbox" class="planToggle" data-section="malayalam">
+                <span class="slider"></span>
+            </label>
+            <span style="margin-left: 10px;">Individual</span>
+            </div>
+            <div class="pricing" style="display: flex; gap: 2rem; justify-content: center;">
+            <div class="plan" id="malayalam-card1"></div>
+            <div class="plan" id="malayalam-card2"></div>
+            </div>
+
+          <!-- English -->
+            <h1 class="price-title">Spoken English</h1>
+            <div style="display: flex; align-items: center;justify-content:center; margin-bottom: 2rem;">
+                <span style="margin-right: 10px;">Group</span>
+                <label class="switch">
+                    <input type="checkbox" class="planToggle" data-section="english">
+                    <span class="slider"></span>
+                </label>
+                <span style="margin-left: 10px;">Individual</span>
+                </div>
+                <div class="pricing" style="display: flex; gap: 2rem; justify-content: center;">
+                <div class="plan" id="english-card1"></div>
+                <div class="plan" id="english-card2"></div>
+            </div> 
+            
+            <!-- Hindi  -->
+            <h1 class="price-title">Spoken Hindi</h1>
+            <div class="pricing">
+                <div class="plan">
+                    <h2>Group Class</h2>
+                    <div class="price">2,999</div>
+                    <ul class="features">
+                    <li><i class="fas fa-check-circle"></i> 30 Days</li>
+                    <li><i class="fas fa-check-circle"></i> 1 Hr Live Class</li>
+                    <li><i class="fas fa-check-circle"></i> Recorded Classes Available</li>
+                    <li><i class="fas fa-check-circle"></i> 24/7 Available</li>
+                    </ul>
+                    <button>Contact us</button>
+                </div>
+                <div class="plan">
+                    <h2>Individual Class</h2>
+                    <div class="price">₹ 8,999</div>
+                    <ul class="features">
+                    <li><i class="fas fa-check-circle"></i> 30 Days </li>
+                    <li><i class="fas fa-check-circle"></i> 1 Hr Live Class</li>
+                    <li><i class="fas fa-check-circle"></i>Recorded Classes Available</li>
+                    <li><i class="fas fa-check-circle"></i> 24/7 Availability</li>
+                    </ul>
+                    <button>contact us</button>
+                </div>
+            </div>
+            
+
+
+         <!-- Price plan details End  -->
 
 
 
@@ -176,7 +250,7 @@
 
 
         <!-- Back to Top -->
-        <a href="#" class="btn btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+        <a href="#" class="btn btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
 
         
         <!-- JavaScript Libraries -->
@@ -192,6 +266,24 @@
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
+        <script src="js/price.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelectorAll('button, a').forEach(function(el) {
+                    if (
+                        (el.tagName === 'BUTTON' && el.textContent.trim().toLowerCase() === 'contact us') ||
+                        (el.tagName === 'A' && el.textContent.trim().toLowerCase() === 'contact us')
+                    ) {
+                        el.addEventListener('click', function(e) {
+                            if (el.tagName === 'BUTTON') {
+                                e.preventDefault();
+                                window.location.href = 'contact.html';
+                            }
+                        });
+                    }
+                });
+            });
+        </script>
     </body>
 
 </html>
